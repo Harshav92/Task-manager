@@ -1,9 +1,11 @@
-from flask import Blueprint , request , render_template, url_for
+from flask import request , render_template, url_for
 from .model import Todo
+from app import app
+from app import db
 
-todo = Blueprint("tasks",__name__)
 
-@todo.route('/') 
+
+@app.route('/') 
 def show(): 
     incomplete = Todo.query.filter_by(complete=False).all() 
     complete = Todo.query.filter_by(complete=True).all() 
@@ -11,7 +13,7 @@ def show():
     return render_template('index.html', incomplete=incomplete, complete=complete) 
   
   
-@todo.route('/add', methods=['POST']) 
+@approute('/add', methods=['POST']) 
 def add(): 
     todo = Todo(text=request.form['todoitem'], complete=False) 
     db.session.add(todo) 
@@ -20,7 +22,7 @@ def add():
     return redirect(url_for('show')) 
   
   
-@todo.route('/finish/<id>') 
+@app.route('/finish/<id>') 
 def finish(id): 
   
     todo = Todo.query.filter_by(id=int(id)).first() 
