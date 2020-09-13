@@ -2,9 +2,8 @@
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
-* [Setup](#setup)
-* [python libraries required](#Python libraries required)
-* [Run](#To Run)
+* [Python libraries required](#Python-libraries-required)
+* [Run](#To-Run)
 
 ### General-info
 * This project implements simple todo task app
