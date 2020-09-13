@@ -1,6 +1,12 @@
 # todoapp
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [python libraries required](#Python libraries required)
+* [Run](#To Run)
 
-### introduction 
+### General-info
 * This project implements simple todo task app
 
 ### Technologies used
@@ -9,7 +15,7 @@
 * Flask frame work
 * HTML/CSS
 
-### Python librares needed
+### Python librares required
 * Flask
 * Flask-mysqldb
 * Flask-sqlalchemy
